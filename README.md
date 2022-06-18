@@ -1,11 +1,13 @@
 <html>
-	<h1>1.reqire softwares</h1>
+	<h1>1.Software required:</h1>
 	Mysql(<a href="https://dev.mysql.com/downloads/mysql/8.0.html">Download mysql bundle[linux]</a>)<br>
-	rbenv(set ruby version 3.0.3 to default)[linux]<br>
-	rbenv-build[linux]<br>
-	install 2gems:<br>
-  bundler(gem)<br>
-  mysql2(gem)<br>
+	default-libmysqlclient-dev[linux debian]<br>
+	rbenv[linux]<br>
+	ruby-build(this may request some of packages to run...)[linux]<br>
+	(set ruby version 3.0.3 to default using rbenv)<br>
+	2gems:<br>
+  	bundler<br>
+  	mysql2(request mysql packages to install)<br>
   <h2>2.Create Database and User</h2>
   <pre><code>
 create database otoiawase;
@@ -13,7 +15,10 @@ create table otoiawase.table(otoi TEXT,name TEXT,kaisya TEXT,phone TEXT,mail TEX
 create user 'mysql'@'localhost' IDENTIFIED BY 'password';
 grant all on *.* to 'mysql'@'localhost';
 ALTER USER 'mysql'@'localhost' IDENTIFIED BY 'password';
+exit
 	</code></pre>
+	3.change directory to this project's root.<br>
+	4.start rails with argment <code>-b 0.0.0.0</code>
   <h3>If you got error when you login to mysql to create user, try this one:</h3>
   <h4>Access denied for user ‘root’@’localhost’</h4>
   Set root's password to default follow this:<br>
