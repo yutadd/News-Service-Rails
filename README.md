@@ -1,13 +1,13 @@
 <html>
 	<h1>1.Software required:</h1>
-	Mysql(<a href="https://dev.mysql.com/downloads/mysql/8.0.html">Download mysql bundle[linux]</a>)<br>
-	default-libmysqlclient-dev[linux debian]<br>
 	rbenv[linux]<br>
 	ruby-build(this may request some of packages to run...)[linux]<br>
 	(set ruby version 3.0.3 to default using rbenv)<br>
-	2gems:<br>
-  	bundler<br>
-  	mysql2(request mysql packages to install)<br>
+	Mysql(<a href="https://dev.mysql.com/downloads/mysql/8.0.html">Download mysql bundle[linux]</a>)<br>
+	default-libmysqlclient-dev[linux debian]<br>
+	<pre>gems:
+  bundler
+  mysql2(request some of mysql packages to install)</pre>
   <h2>2.Create Database and User</h2>
   <pre><code>
 create database otoiawase;
